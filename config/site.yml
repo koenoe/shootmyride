@@ -8,7 +8,7 @@ site:
   meta_description: "some meta description"
 
   pages:
-    - "index": # page path (the template can edited here app/views/pages/index.liquid)
+    - "index":
         title: "Home"
         published: true
     - "over-ons":
@@ -16,6 +16,12 @@ site:
         published: true
     - "onze-diensten":
         title: "Onze diensten"
+        published: true
+    - "portfolio":
+        title: "Portfolio"
+        published: true
+    - "contact":
+        title: "Contact"
         published: true
     - "404":
         title: "Page not found"

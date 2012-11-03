@@ -1,0 +1,29 @@
+<nav>
+	<ul>
+		<li>
+			<a href="/"{% if page.fullpath == 'index' %} class="active"{% endif %}>
+				Home<br><span>Welkom</span>
+			</a>
+		</li>
+		<li>
+			<a href="/over-ons"{% if page.fullpath == 'over-ons' %} class="active"{% endif %}>
+				Over ons<br><span>Wie zijn wij?</span>
+			</a>
+		</li>
+		<li>
+			<a href="/onze-diensten"{% if page.fullpath == 'onze-diensten' %} class="active"{% endif %}>
+				Onze diensten<br><span>Wat doen wij?</span>
+			</a>
+		</li>
+		<li>
+			<a href="/portfolio"{% if page.fullpath == 'portfolio' %} class="active"{% endif %}>
+				Portfolio<br><span>Ons werk</span>
+			</a>
+		</li>
+		<li>
+			<a href="/contact"{% if page.fullpath == 'contact' %} class="active"{% endif %}>
+				Contact<br><span>Stel je vraag</span>
+			</a>
+		</li>
+	</ul>
+</nav>

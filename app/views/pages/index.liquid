@@ -1,16 +1,184 @@
 <!DOCTYPE html>
 <html lang="{{ locale }}">
-	<head>
-		<meta charset="utf-8">
-		{% include 'stylesheets' %}
-		{% include 'javascripts' %}
-		<title>{{ site.name }} | {{ page.title }}</title>
-	</head>
-	<body>
+<head>
+	<meta charset="utf-8">
+	{% include 'stylesheets' %}
+	{% include 'javascripts' %}
+	<title>{{ site.name }} | {{ page.title }}</title>
+</head>
+<body{% if page.fullpath == 'index' %} class="home"{% endif %}>
+	<div id="container">
+		<header>
+			<h1>
+				<a href="/"><span></span></a>
+			</h1>
+			{% include 'navigation' %}
+		</header>
 		{% block 'main' %}
-		{% editable_long_text 'page_content' %}
-			Edit your content here
-		{% endeditable_long_text %}
+			{% include 'slider' %}
+			<div id="slogan">
+				<h2>
+					{% editable_short_text 'slogan_title' %}
+						Title here
+					{% endeditable_short_text %}
+				</h2>
+				<h3>
+					{% editable_short_text 'slogan_subtitle' %}
+						Subtitle here
+					{% endeditable_short_text %}
+				</h3>
+			</div>
+			<div id="latest-shoots">
+				<ul>
+					<li>
+						<a href="">
+							<img src="/images/thumbs/1.jpg">
+							<div class="hover">
+								<p>Ferrari F50<br><span>Jan Janssen</span></p>
+								<span class="icon"></span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="/images/thumbs/1.jpg">
+							<div class="hover">
+								<p>Ferrari F50<br><span>Jan Janssen</span></p>
+								<span class="icon"></span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="/images/thumbs/1.jpg">
+							<div class="hover">
+								<p>Ferrari F50<br><span>Jan Janssen</span></p>
+								<span class="icon"></span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="/images/thumbs/1.jpg">
+							<div class="hover">
+								<p>Ferrari F50<br><span>Jan Janssen</span></p>
+								<span class="icon"></span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="/images/thumbs/1.jpg">
+							<div class="hover">
+								<p>Ferrari F50<br><span>Jan Janssen</span></p>
+								<span class="icon"></span>
+							</div>
+						</a>
+					</li>
+					<li class="no-mg-right">
+						<a href="">
+							<img src="/images/thumbs/1.jpg">
+							<div class="hover">
+								<p>Ferrari F50<br><span>Jan Janssen</span></p>
+								<span class="icon"></span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="/images/thumbs/1.jpg">
+							<div class="hover">
+								<p>Ferrari F50<br><span>Jan Janssen</span></p>
+								<span class="icon"></span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="/images/thumbs/1.jpg">
+							<div class="hover">
+								<p>Ferrari F50<br><span>Jan Janssen</span></p>
+								<span class="icon"></span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="/images/thumbs/1.jpg">
+							<div class="hover">
+								<p>Ferrari F50<br><span>Jan Janssen</span></p>
+								<span class="icon"></span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="/images/thumbs/1.jpg">
+							<div class="hover">
+								<p>Ferrari F50<br><span>Jan Janssen</span></p>
+								<span class="icon"></span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="/images/thumbs/1.jpg">
+							<div class="hover">
+								<p>Ferrari F50<br><span>Jan Janssen</span></p>
+								<span class="icon"></span>
+							</div>
+						</a>
+					</li>
+					<li class="no-mg-right">
+						<a href="">
+							<img src="/images/thumbs/1.jpg">
+							<div class="hover">
+								<p>Ferrari F50<br><span>Jan Janssen</span></p>
+								<span class="icon"></span>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<article class="our-services">
+				<section>
+					<hgroup class="icon-person">
+						<h4>Tips van de pro</h4>
+						<h5>Hoe fotografeer je een auto?</h5>
+					</hgroup>
+					<p>Adviezen over compositie, kleur en licht. Waar moet je op letten met auto's fotograferen? Of heb je een vraag?</p>
+					<a class="btn" href="#">Lees meer</a>
+				</section>
+				<section>
+					<hgroup class="icon-camera">
+						<h4>Fotografiecursus</h4>
+						<h5>Meld je nu aan</h5>
+					</hgroup>
+					<p>Wil je praktijk ervaring opdoen en les krijgen van een professional? Meld je dan nu aan! Ook leuk als cadeau.</p>
+					<a class="btn" href="#">Lees meer</a>
+				</section>
+				<section class="no-mg">
+					<hgroup class="icon-globe">
+						<h4>Stuur een fotoshootlocatie in</h4>
+						<h5>Ontvang 25% korting</h5>
+					</hgroup>
+					<p>Breng ons op de hoogte van een potentiële locatie en ontvang 25% korting op jouw eigen fotoshoot!</p>
+					<a class="btn" href="#">Lees meer</a>
+				</section>
+			</article>
 		{% endblock %}
-	</body>
+	</div>
+	<footer>
+		<section id="one">
+			<section class="wrapper">
+				{% include 'navigation' %}
+				{% include 'address' %}
+			</section>
+		</section>
+		<section id="two">
+			<section class="wrapper">
+				{% include 'footer' %}
+			</section>
+		</section>
+	</footer>
 </html>
