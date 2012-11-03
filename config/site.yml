@@ -1,0 +1,21 @@
+site:
+  name: "Shoot my Ride"
+
+  locales: [nl]
+
+  seo_title: "Shoot my Ride"
+  meta_keywords: "some meta keywords"
+  meta_description: "some meta description"
+
+  pages:
+    - "index": # page path (the template can edited here app/views/pages/index.liquid)
+        title: "Home"
+        published: true
+    - "over-ons":
+        title: "Over ons"
+        published: true
+    - "onze-diensten":
+        title: "Onze diensten"
+        published: true
+    - "404":
+        title: "Page not found"
