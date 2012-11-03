@@ -2,21 +2,11 @@
 	<div class="slider-shadow"></div>
 	<div class="slides-wrapper">
 		<div class="cycle">
-			<figure>
-				<img src="/images/slider/1.jpg">
-			</figure>
-			<figure>
-				<img src="/images/slider/2.jpg">
-			</figure>
-			<figure>
-				<img src="/images/slider/3.jpg">
-			</figure>
-			<figure>
-				<img src="/images/slider/4.jpg">
-			</figure>
-			<figure>
-				<img src="/images/slider/5.jpg">
-			</figure>
+			{% for image in contents.slider limit:5 %}
+				<figure>
+					<img src="{{ image.image.url }}" alt="{{ image.title }}">
+				</figure>
+			{% endfor %}
 		</div>
 		<a class="slider-nav slider-prev" href="#"></a>
 		<a class="slider-nav slider-next" href="#"></a>

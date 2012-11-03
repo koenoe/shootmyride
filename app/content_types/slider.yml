@@ -1,0 +1,18 @@
+name: Slider
+label_field_name: title
+order_by: _position
+slug: slider
+fields:
+- title:
+    label: Title
+    type: string
+    required: true
+    hint: Title of your image
+- image:
+    label: Image
+    type: file
+    required: true
+- url:
+    label: Url
+    type: string
+    hint: Url to something
