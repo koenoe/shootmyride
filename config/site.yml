@@ -11,17 +11,26 @@ site:
     - "index":
         title: "Home"
         published: true
+        listed: true
     - "over-ons":
         title: "Over ons"
         published: true
+        listed: true
     - "onze-diensten":
         title: "Onze diensten"
         published: true
+        listed: true
     - "portfolio":
         title: "Portfolio"
         published: true
+        listed: true
     - "contact":
         title: "Contact"
         published: true
+        listed: true
+    - "algemene-voorwaarden":
+        title: "Algemene voorwaarden"
+        published: true
+        listed: false
     - "404":
         title: "Page not found"

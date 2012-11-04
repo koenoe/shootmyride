@@ -1,0 +1,15 @@
+- "Fiesta ST150 van Koen":
+    client: Koen Romers
+    brand: Ford
+    type: Fiesta ST
+    build_year: 2006
+    price: 23000
+    gear_box: "MT"
+    hp: 157
+    torque: 210
+    cc: 1999
+    cylinders: 4
+    weight: 1000
+    topspeed: 220
+    acceleration: 8.3
+    _permalink: fiesta-st150-van-koen

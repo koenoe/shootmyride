@@ -1,4 +1,5 @@
 name: Slider
+description: List of all the images being used in the slider
 label_field_name: title
 order_by: _position
 slug: slider
@@ -15,4 +16,4 @@ fields:
 - url:
     label: Url
     type: string
-    hint: Url to something
+    hint: Url to internal of external page

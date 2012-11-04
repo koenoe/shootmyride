@@ -1,0 +1,21 @@
+- "Koen Romers":
+    firstname: Koen
+    lastname: Romers
+    email: koen@shootmyride.nl
+    address: Oranjelaan 7
+    city: Rozenburg
+    zipcode: 3181 HK
+    phone: "0624216136"
+    mobile: "0624216136"
+    _permalink: koen-romers
+
+- "Sytse Dijkstra":
+    firstname: Sytse
+    lastname: Dijkstra
+    email: sytse@shootmyride.nl
+    address: Musschenbroekstraat 42
+    city: "'s-Hertogenbosch"
+    zipcode: 5223 BP
+    phone: "0618819448"
+    mobile: "0618819448"
+    _permalink: sytse-dijkstra

@@ -1,0 +1,78 @@
+name: Photoshoots
+description: List of all the photoshoots
+label_field_name: title
+order_by: _position
+slug: photoshoots
+fields:
+- client:
+    label: Client
+    type: belongs_to
+    class_name: Clients
+    target: clients
+    inverse_of: photoshoots
+    required: true
+- title:
+    label: Title
+    type: string
+    required: true
+    hint: Title for backend overview
+- brand:
+    label: Brand
+    type: string
+    required: true
+    hint: Brand of the car
+- type:
+    label: Type
+    type: string
+    required: true
+    hint: Type and model of the car
+- build_year:
+    label: Build year
+    type: string
+    required: true
+    hint: Build year of the car
+- price:
+    label: New price of the car
+    type: string
+    required: true
+    hint: Type and model of the car
+- gear_box:
+    label: Gear box of the car
+    type: select
+    select_options: 
+        - "AT"
+        - "MT"
+- hp:
+    label: Power of the car in HP
+    type: string
+    hint: Only number
+- torque:
+    label: Torque of the car in Nm
+    type: string
+    hint: Only number
+- cc:
+    label: CC of the car
+    type: string
+    hint: Only number
+- cylinders:
+    label: Number of cylinders of the car
+    type: string
+    hint: Only number
+- weight:
+    label: Weight of the car
+    type: string
+    hint: Only number
+- topspeed:
+    label: Topspeed of the car in km/h
+    type: string
+    hint: Only number
+- acceleration:
+    label: Acceleration 0-100 km/h
+    type: string
+    hint: Only number
+- photos:
+    label: Photos
+    type: has_many
+    class_name: Photos
+    target: photos
+    inverse_of: photoshoot

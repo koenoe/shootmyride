@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ locale }}">
 <head>
+	<title>{{ site.name }} | {{ page.title }}</title>
 	<meta charset="utf-8">
+	{% csrf_meta %}
 	{% include 'stylesheets' %}
 	{% include 'javascripts' %}
-	<title>{{ site.name }} | {{ page.title }}</title>
 </head>
 <body{% if page.fullpath == 'index' %} class="home"{% endif %}>
 	<div id="container">
@@ -28,7 +29,7 @@
 					{% endeditable_short_text %}
 				</h3>
 			</div>
-			{% include 'latest-shoots' %}
+			{% include 'latest_shoots' %}
 			<article class="our-services">
 				<section>
 					<hgroup class="icon-person">
@@ -94,4 +95,5 @@
 			</section>
 		</section>
 	</footer>
+</body>
 </html>

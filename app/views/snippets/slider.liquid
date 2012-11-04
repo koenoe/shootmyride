@@ -2,7 +2,7 @@
 	<div class="slider-shadow"></div>
 	<div class="slides-wrapper">
 		<div class="cycle">
-			{% for image in contents.slider limit:5 %}
+			{% for image in contents.slider %}
 				<figure>
 					<img src="{{ image.image.url }}" alt="{{ image.title }}">
 				</figure>
