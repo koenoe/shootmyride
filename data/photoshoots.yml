@@ -13,3 +13,18 @@
     topspeed: 220
     acceleration: 8.3
     _permalink: fiesta-st150-van-koen
+- "Dodge Viper GTS":
+    client: Koen Romers
+    brand: Dodge
+    type: Viper GTS
+    build_year: 1998
+    price: 250000
+    gear_box: "MT"
+    hp: 500
+    torque: 500
+    cc: 9000
+    cylinders: 8
+    weight: 2000
+    topspeed: 298
+    acceleration: 5
+    _permalink: dodge-viper-gts

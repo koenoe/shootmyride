@@ -1,6 +1,15 @@
 {% extends 'index' %}
 
 {% block 'main' %}
-	<p>Over ons hier!</p>
-	<p>{{ contents.slider.api.show }}</p>
+	<div id="content">
+		<hgroup>
+			<h2>{{ page.title }}</h2>
+		</hgroup>
+		{% include 'breadcrumb' %}
+		<article>
+			<section class="content">
+				<p>Over ons hier</p>
+			</section>
+		</article>
+	</div>
 {% endblock %}

@@ -20,6 +20,15 @@ site:
         title: "Onze diensten"
         published: true
         listed: true
+        redirect_url: /onze-diensten/fotoshoot
+    - "onze-diensten/fotoshoot":
+        title: "Fotoshoot"
+        published: true
+        listed: true
+    - "onze-diensten/fotografiecursus":
+        title: "Fotografiecursus"
+        published: true
+        listed: true
     - "portfolio":
         title: "Portfolio"
         published: true

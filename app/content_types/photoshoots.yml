@@ -10,7 +10,6 @@ fields:
     class_name: Clients
     target: clients
     inverse_of: photoshoots
-    required: true
 - title:
     label: Title
     type: string

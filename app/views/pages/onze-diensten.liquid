@@ -1,5 +1,26 @@
 {% extends 'index' %}
 
 {% block 'main' %}
-	<p>Onze diensten hier!</p>
+	<div id="content">
+		<hgroup>
+			<h2>{{ page.title }}</h2>
+		</hgroup>
+		{% include 'breadcrumb' %}
+		<article>
+			<nav class="tabs">
+				{% if page.parent.slug != 'index' %}
+					{% nav 'parent', active_class:'active', icon:true %}
+				{% else %}
+					{% nav 'page', active_class:'active', icon:true %}
+				{% endif %}
+			</nav>
+			<section class="content">
+				{% editable_long_text 'content' %}
+					<p>Page content here</p>
+				{% endeditable_long_text %}
+
+				{% block 'content' %}{% endblock %}
+			</section>
+		</article>
+	</div>
 {% endblock %}

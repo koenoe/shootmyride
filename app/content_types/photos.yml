@@ -19,4 +19,3 @@ fields:
     class_name: Photoshoots
     target: photoshoots
     inverse_of: photos
-    required: true

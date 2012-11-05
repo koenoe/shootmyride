@@ -1,58 +1,15 @@
 <div id="latest-shoots">
 	<ul>
-		<li>
-			<a href="">
-				<img src="/images/thumbs/1.jpg">
-				<div class="hover">
-					<p>Ferrari F50<br><span>Jan Janssen</span></p>
-					<span class="icon"></span>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="">
-				<img src="/images/thumbs/1.jpg">
-				<div class="hover">
-					<p>Ferrari F50<br><span>Jan Janssen</span></p>
-					<span class="icon"></span>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="">
-				<img src="/images/thumbs/1.jpg">
-				<div class="hover">
-					<p>Ferrari F50<br><span>Jan Janssen</span></p>
-					<span class="icon"></span>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="">
-				<img src="/images/thumbs/1.jpg">
-				<div class="hover">
-					<p>Ferrari F50<br><span>Jan Janssen</span></p>
-					<span class="icon"></span>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="">
-				<img src="/images/thumbs/1.jpg">
-				<div class="hover">
-					<p>Ferrari F50<br><span>Jan Janssen</span></p>
-					<span class="icon"></span>
-				</div>
-			</a>
-		</li>
-		<li class="no-mg-right">
-			<a href="">
-				<img src="/images/thumbs/1.jpg">
-				<div class="hover">
-					<p>Ferrari F50<br><span>Jan Janssen</span></p>
-					<span class="icon"></span>
-				</div>
-			</a>
-		</li>
+		{% for photoshoot in contents.photoshoots %}
+			<li>
+				<a href="#">
+					<img src="{{ photoshoot.photos.first.image.url | resize:'135x135#' }}" alt="{{ photoshoot.title }}">
+					<div class="hover">
+						<p>{{ photoshoot.brand }} {{ photoshoot.type }}<br><span>{{ photoshoot.client.name }}</span></p>
+						<span class="icon"></span>
+					</div>
+				</a>
+			</li>
+		{% endfor %}
 	</ul>
 </div>	

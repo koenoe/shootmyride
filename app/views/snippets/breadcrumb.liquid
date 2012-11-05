@@ -1,0 +1,9 @@
+<div class="breadcrumbs">
+	<a href="/">{{ site.index.title }}</a>
+	{% if page.parent and page.parent.slug != site.index.slug %}
+		<span>/</span>
+		<a href="/{{ page.parent.slug }}">{{ page.parent.title }}</a>
+	{% endif %}
+	<span>/</span>
+	<a href="/{{ page.slug }}" class="active">{{ page.title }}</a>
+</div>

@@ -3,10 +3,10 @@ development:
   email: koen@shootmyride.nl
   password: 3Baco900
 staging:
-  host: staging.example.com
-  email: john@doe.net
-  password: easyone
+  host: staging.shootmyride.nl
+  email: koen@shootmyride.nl
+  password: 3Baco900
 production:
-  host: www.example.com
-  email: john@doe.net
-  password: easyone
+  host: www.shootmyride.nl
+  email: koen@shootmyride.nl
+  password: 3Baco900
