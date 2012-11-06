@@ -12,6 +12,7 @@ site:
         title: "Home"
         published: true
         listed: true
+        cache_strategy: "Simple"
     - "over-ons":
         title: "Over ons"
         published: true
