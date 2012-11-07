@@ -43,6 +43,12 @@ h2
 	font-size: 21px
 	font-weight: 600
 	color: $darkGrey
+p 
+	margin-bottom: 25px
+	line-height: 22px
+
+	&.small
+		font-size: 11px
 
 body
 	font-family: $openSans
@@ -226,7 +232,7 @@ body
 				a
 					color: $lightGrey
 
-		#latest-shoots
+		div.portfolio
 			position: relative
 			float: left
 			width: 940px
@@ -247,10 +253,14 @@ body
 					display: block
 					float: left
 					border: 1px solid $borderGrey
-					width: 135px
-					height: 135px
 					padding: 3px
 					overflow: hidden
+					width: 215px
+					height: 215px
+
+					&.small
+						width: 135px
+						height: 135px
 
 					img 
 						float: left
@@ -261,8 +271,8 @@ body
 						position: absolute
 						top: 4px
 						left: 4px
-						width: 135px
-						height: 135px
+						width: 215px
+						height: 215px
 						background: #444240
 						text-align: center
 						color: #fff
@@ -272,26 +282,41 @@ body
 						+transition-duration(0.3s)
 						+transition-timing-function(ease-in)
 
+						&.small
+							width: 135px
+							height: 135px
+
 						.icon
 							position: absolute
 							width: 31px
 							height: 31px
-							left: 50px
-							top: 35px
+							left: 91px
+							top: 75px
 							background: url(/images/thumb-hover-icon.png) no-repeat
 							+opacity(0)
 							+transition-duration(0.5s)
 
+							&.small
+								left: 50px
+								top: 35px
+
 						p
-							margin: 70px 0 0 0 
+							margin: 115px 0 0 0 
 							line-height: 15px
 							font-weight: 700
-							font-size: 11px
-							+transition-duration(0.2s)
-							+scale(5)
+							font-size: 12px
+							// +transition-duration(0.2s)
+							// +scale(3)
+
+							&.small
+								margin: 70px 0 0 0 
+								font-size: 11px
+
+								span
+									font-size: 10px
 
 							span
-								font-size: 10px
+								font-size: 11px
 								font-weight: normal
 					&:hover 
 						border: 1px solid $borderGrey
@@ -300,8 +325,8 @@ body
 							+opacity(0.9)
 							.icon
 								+opacity(1)
-							p 
-								+scale(1)
+							// p 
+							// 	+scale(1)
 		.our-services
 			position: relative
 			float: left
@@ -387,7 +412,7 @@ body
 					float: left
 					width: 100%
 					border-bottom: 1px solid $borderGrey
-					margin: 10px 0
+					margin: 10px 0 25px 0
 
 					li
 						float: left
@@ -434,13 +459,6 @@ body
 				.content
 					position: relative
 					float: left
-					margin: 25px 0
-					p 
-						margin-bottom: 25px
-						line-height: 22px
-
-						&.small
-							font-size: 11px
 
 					.priceplans
 						position: relative
@@ -552,6 +570,8 @@ body
 				p 
 					color: $footerGreyDark
 					font-size: 10px
+					margin: 0
+					line-height: normal
 
 					span
 						margin: 0 4px

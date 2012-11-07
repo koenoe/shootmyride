@@ -34,6 +34,12 @@ site:
         title: "Portfolio"
         published: true
         listed: true
+    - "portfolio/detail":
+        title: "Portfolio detail"
+        published: true
+        listed: false
+        # templatized: true
+        # model: photoshoots
     - "contact":
         title: "Contact"
         published: true

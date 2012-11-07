@@ -31,30 +31,24 @@ fields:
     required: true
     hint: Build year of the car
 - price:
-    label: New price of the car
+    label: New price
     type: string
     required: true
     hint: Type and model of the car
-- gear_box:
-    label: Gear box of the car
-    type: select
-    select_options: 
-        - "AT"
-        - "MT"
 - hp:
-    label: Power of the car in HP
+    label: Power in HP
     type: string
     hint: Only number
 - torque:
-    label: Torque of the car in Nm
+    label: Torque in Nm
     type: string
     hint: Only number
 - cc:
-    label: CC of the car
+    label: CC
     type: string
     hint: Only number
 - cylinders:
-    label: Number of cylinders of the car
+    label: Number of cylinders
     type: string
     hint: Only number
 - weight:
@@ -62,7 +56,7 @@ fields:
     type: string
     hint: Only number
 - topspeed:
-    label: Topspeed of the car in km/h
+    label: Topspeed in km/h
     type: string
     hint: Only number
 - acceleration:
