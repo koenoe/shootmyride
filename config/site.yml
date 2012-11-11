@@ -38,8 +38,8 @@ site:
         title: "Portfolio detail"
         published: true
         listed: false
-        # templatized: true
-        # model: photoshoots
+        templatized: true
+        model: photoshoots
     - "contact":
         title: "Contact"
         published: true
