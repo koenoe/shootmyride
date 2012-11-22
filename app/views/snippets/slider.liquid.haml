@@ -1,0 +1,6 @@
+%div{ :class => "slider-wrapper" }
+	%div{ :class => "slider royalslider" }
+		{% for image in contents.slider %}
+		%a{ :href => "{{ image.image.url }}", :class => "rsImg" }
+			{{ image.title }}
+		{% endfor %}

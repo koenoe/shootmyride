@@ -1,28 +1,5 @@
 {% extends 'index' %}
 
 {% block 'main' %}
-	<div id="content">
-		{% include 'breadcrumb' %}
-		<article>
-			<section class="content">
-				<div class="filter">Filter here</div>
-				<div class="portfolio">
-					<ul>
-						{% for photoshoot in contents.photoshoots %}
-							<li{{ ' class="no-mg-right"' | modulo: forloop.index0, 4 }}>
-								<a href="/portfolio/{{ photoshoot._permalink }}">
-									<img src="{{ photoshoot.photos.first.image.url | resize:'215x215#' }}" alt="{{ photoshoot.title }}">
-									<div class="hover">
-										<p>{{ photoshoot.brand }} {{ photoshoot.type }}<br><span>{{ photoshoot.client.name }}</span></p>
-										<span class="icon"></span>
-									</div>
-								</a>
-							</li>
-						{% endfor %}
-					</ul>
-				</div>
-				<div class="paging">Paging here</div>
-			</section>
-		</article>
-	</div>
+	<p>portfolio pagina</p>
 {% endblock %}

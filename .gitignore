@@ -1,3 +1,5 @@
 public/.sass-cache
 tmp
 *.DS_Store
+*.css
+public/samples

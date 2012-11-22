@@ -63,6 +63,10 @@ fields:
     label: Acceleration 0-100 km/h
     type: string
     hint: Only number
+- thumbnail:
+    label: Thumbnail
+    type: file
+    required: true
 - photos:
     label: Photos
     type: has_many

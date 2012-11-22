@@ -5,70 +5,21 @@
 
 		%title {{ site.name }} | {{ page.title }}
 
+		%meta{ :content => "{{ site.meta_description }}", :name => "description" }
+		%meta{ :content => "{{ site.meta_keywords }}", :name => "keywords" }
+
 		{% csrf_meta %}
 		{% include 'stylesheets' %}
 		{% include 'javascripts' %}
 
-		%meta{ :content => "{{ site.meta_description }}", :name => "description" }
-		%meta{ :content => "{{ site.meta_keywords }}", :name => "keywords" }
+	%body
+		{% include 'header' %}
 
-	%body{ :class => "{% if page.fullpath == 'index' %}home{% endif %}"}
-		#container
-			%header
-				%h1
-					%a{ :href => "/" }
-						%span
-				{% include 'navigation' %}
-			{% block 'main' %}
+		{% block 'main' %}
+		
+		{% include 'slider' %}
+		{% include 'home' %}
 
-			{% include 'slider' %}
-
-			#slogan
-				%h2
-					{% editable_short_text 'slogan_title' %}Title here{% endeditable_short_text %}
-				%h3
-					{% editable_short_text 'slogan_subtitle' %}Subtitle here{% endeditable_short_text %}
-
-			{% include 'latest_shoots' %}
-
-			%article{ :class => "our-services" }
-				%section
-					%hgroup{ :class => "icon-person" }
-						%h4
-							{% editable_short_text 'service1_title' %}Title here{% endeditable_short_text %}
-						%h5
-							{% editable_short_text 'service1_subtitle' %}Subtitle here{% endeditable_short_text %}
-					%p
-						{% editable_short_text 'service1_intro' %}Intro here{% endeditable_short_text %}
-					%a{ :class => "btn", :href => "{% editable_short_text 'service1_link' %}Link here{% endeditable_short_text %}" }
-						{% editable_short_text 'service1_link_label' %}Label here{% endeditable_short_text %}
-				%section
-					%hgroup{ :class => "icon-camera" }
-						%h4
-							{% editable_short_text 'service2_title' %}Title here{% endeditable_short_text %}
-						%h5
-							{% editable_short_text 'service2_subtitle' %}Subtitle here{% endeditable_short_text %}
-					%p
-						{% editable_short_text 'service2_intro' %}Intro here{% endeditable_short_text %}
-					%a{ :class => "btn", :href => "{% editable_short_text 'service1_link' %}Link here{% endeditable_short_text %}" }
-						{% editable_short_text 'service2_link_label' %}Label here{% endeditable_short_text %}
-				%section{ :class => "no-mg" }
-					%hgroup{ :class => "icon-globe" }
-						%h4
-							{% editable_short_text 'service3_title' %}Title here{% endeditable_short_text %}
-						%h5
-							{% editable_short_text 'service3_subtitle' %}Subtitle here{% endeditable_short_text %}
-					%p
-						{% editable_short_text 'service3_intro' %}Intro here{% endeditable_short_text %}
-					%a{ :class => "btn", :href => "{% editable_short_text 'service1_link' %}Link here{% endeditable_short_text %}" }
-						{% editable_short_text 'service3_link_label' %}Label here{% endeditable_short_text %}
-			{% endblock %}
-
-		%footer
-			%section#one
-				%section{ :class => "wrapper" } 
-					{% include 'navigation' %}
-					{% include 'address' %}
-			%section#two
-				%section{ :class => "wrapper" } 
-					{% include 'footer' %}
+		{% endblock %}
+		
+		{% include 'footer' %}

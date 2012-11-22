@@ -11,6 +11,7 @@
     weight: 1000
     topspeed: 220
     acceleration: 8.3
+    thumbnail: /samples/photoshoots/1.jpeg
     _permalink: fiesta-st150-van-koen
 - "Dodge Viper GTS":
     client: Koen Romers
@@ -25,4 +26,5 @@
     weight: 2000
     topspeed: 298
     acceleration: 5
+    thumbnail: /samples/photoshoots/2.jpeg
     _permalink: dodge-viper-gts

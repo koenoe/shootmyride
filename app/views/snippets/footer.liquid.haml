@@ -1,0 +1,17 @@
+%footer
+	%div{ :class => "shadow" }
+	%section{ :class => "wrapper" }
+		%nav
+			%ul
+				%li{ :class => "{% if page.slug == 'index' %}active{% endif %}" }
+					%a{ :href => "/" }
+						Home
+				{% nav 'parent', depth: 1, no_wrapper: true, icon: false, active_class: 'active' %}
+		%ul{ :class => "social" }
+			%li
+				%a{ :href => "#" }
+					{{ 'twitter.gif' | theme_image_tag: 'alt:Twitter' }}
+			%li
+				%a{ :href => "#" }
+					{{ 'facebook.gif' | theme_image_tag: 'alt:Facebook' }}
+	%a{ :href => "#", :class => "backtotop" }

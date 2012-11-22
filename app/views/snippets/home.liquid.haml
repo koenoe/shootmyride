@@ -1,0 +1,48 @@
+%article{ :class => "content-wrapper grey" }
+	%div{ :class => "shadow" }
+	%section{ :class => "wrapper" }
+		%article{ :class => "left text" }
+			%h2
+				Een professionele fotoshoot?
+			%p{ :class => "intro" }
+				Dan ben je bij ons aan het juiste adres! Tevens verzorgen wij cursussen gericht op automotive fotografie.
+			%p
+				%a{ :href => "#", :class => "btn" }
+					Lees meer
+		%article{ :class => "right" }
+			{{ 'dummies/home-our-services.png' | theme_image_tag: 'alt:Onze diensten' }}
+
+%article{ :class => "content-wrapper orange" }
+	%section{ :class => "wrapper" }
+		%article{ :class => "left" }
+			{{ 'dummies/home-about-us.png' | theme_image_tag: 'alt:Ons team' }}
+		%article{ :class => "right text extra" }
+			%h2
+				Wie zijn wij?
+			%p{ :class => "intro" }
+				Ons team bestaat uit 2 freelance fotografen met jarenlange ervaring in automotive fotografie.
+			%p
+				%a{ :href => "#", :class => "btn grey" }
+					Lees meer
+
+%article{ :class => "content-wrapper" }
+	%section{ :class => "wrapper" }
+		%article{ :class => "left text extra" }
+			%h2{ :class => "grey" }
+				Wat hebben wij gedaan?
+			%p{ :class => "intro grey" }
+				Wij hebben een zeer divers portfolio en hebben de mooiste fotoshoots op een rij gezet.
+			%p
+				%a{ :href => "#", :class => "btn" }
+					Bekijk ons portfolio
+		%article{ :class => "right" }
+			%ul{ :class => "thumbs" }
+				{% for photoshoot in contents.photoshoots limit:12 %}
+				%li{ :class => "small{{ ' no-mg' | modulo: forloop.index0, 2 }}" }
+					%a{ :href => "/portfolio/{{ photoshoot._permalink }}" }
+						%img{ :src => "{{ photoshoot.thumbnail.url }}", :alt => "{{ photoshoot.title }}" }
+						%p
+							{{ photoshoot.brand }} {{ photoshoot.type }}
+							%span{ :class => "btn" }
+								Bekijken
+				{% endfor %}
