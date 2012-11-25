@@ -1,0 +1,23 @@
+{% extends 'index' %}
+
+{% block 'main' %}
+
+%div{ :class => "maps" }
+	google maps here
+
+%article{ :class => "intro-wrapper" }
+	%div{ :class => "shadow" }
+	%section{ :class => "wrapper" }
+		%h2
+			Neem contact met ons op
+		%p{ :class => "intro" }
+			Je kunt contact met ons opnemen door het contactformulier op deze pagina in te vullen. Wil je onze nieuwsbrief ontvangen? Laat dan je e-mailadres achter via onderstaand formulier.
+
+%article{ :class => "main-content-wrapper" }
+	%section{ :class => "wrapper" }
+		%h2
+			Contactformulier
+		%p{ :class => "intro" }
+			Vul onderstaand contactformulier in en wij nemen zo spoedig mogelijk contact met je op.
+
+{% endblock %}

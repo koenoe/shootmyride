@@ -1,0 +1,141 @@
+{% extends 'index' %}
+
+{% block 'main' %}
+
+%figure{ :class => "header",:data => {:src => "/images/dummies/header_our-services4.jpg"}}
+
+%article{ :class => "intro-wrapper" }
+	%div{ :class => "shadow" }
+	%section{ :class => "wrapper" }
+		%h2
+			Wat kunnen we voor jou betekenen?
+		%p{ :class => "intro" }
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed felis sapien, tincidunt non pulvinar in, ultrices eu orci. Sed viverra purus non magna sodales non tempor nibh vestibulum.
+		%ul
+			%li
+				%a{ :href => "#fotoshoot", :class => "btn" }
+					Fotoshoot
+			%li
+				%a{ :href => "#cursus", :class => "btn" }
+					Cursus
+			%li{ :class => "no-mg" }
+				%a{ :href => "#nabewerking", :class => "btn" }
+					Nabewerking
+%article{ :class => "main-content-wrapper" }
+	%section{ :class => "wrapper" }
+		%h2#anchor-1
+			Fotoshoot
+		%p{ :class => "intro" }
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed felis sapien, tincidunt non pulvinar in, ultrices eu orci. Sed viverra purus non magna sodales non tempor nibh vestibulum. 
+
+		%div{ :class => "priceplans" }
+			%div{ :class => "priceplan" }
+				%h3
+					Basis
+				%ul
+					%li{ :class => "price" }
+						&euro; 149,-
+					%li
+						Door ons gekozen locatie
+					%li 
+						1 rig shot
+					%li
+						Basis nabewerking
+					%li
+						Print op A4
+					%li
+						DVD met de beste foto's
+					%li{ :class => "book" }
+						%a{ :href => "#", :class => "btn" }
+							Reserveren
+			%div{ :class => "priceplan highlight" }
+				%h3
+					Uitgebreid
+				%ul
+					%li{ :class => "price" }
+						&euro; 249,-
+					%li
+						Vrije locatie naar keuze
+					%li 
+						2 rig shots
+					%li
+						Geavanceerde nabewerking
+					%li
+						Print op A4
+					%li
+						DVD met de beste foto's
+					%li{ :class => "book" }
+						%a{ :href => "#", :class => "btn" }
+							Reserveren
+			%div{ :class => "priceplan" }
+				%h3
+					Op maat
+				%ul
+					%li{ :class => "price small" }
+						Prijs op aanvraag
+					%li
+						Bijzondere locaties mogelijk (bijv. circuit)
+					%li 
+						Club of meerdere auto's
+					%li
+						Speciale nabewerkingseisen
+					%li
+						In het donker met studioflitsers
+					%li
+						&hellip; en nog veel meer
+					%li{ :class => "book" }
+						%a{ :href => "#", :class => "btn" }
+							Reserveren
+		%h2#anchor-2
+			Cursus
+		%p{ :class => "intro" }
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed felis sapien, tincidunt non pulvinar in, ultrices eu orci. Sed viverra purus non magna sodales non tempor nibh vestibulum. 
+
+		%div{ :class => "table" }
+			%table
+				%tr{ :class => "no-border" }
+					%th
+						Datum
+					%th
+						Locatie
+					%th
+						&nbsp;
+				%tr{ :class => "even" }
+					%td
+						Woensdag 2 januari 2013
+					%td
+						Oranjelaan 7, Rozenburg ZH
+					%td
+						%a{ :href => "#", :class => "btn" }
+							Inschrijven
+				%tr
+					%td
+						Woensdag 2 januari 2013
+					%td
+						Oranjelaan 7, Rozenburg ZH
+					%td
+						%a{ :href => "#", :class => "btn" }
+							Inschrijven
+				%tr{ :class => "even" }
+					%td
+						Woensdag 2 januari 2013
+					%td
+						Oranjelaan 7, Rozenburg ZH
+					%td
+						%a{ :href => "#", :class => "btn" }
+							Inschrijven
+				%tr{ :class => "no-border" }
+					%td
+						Woensdag 2 januari 2013
+					%td
+						Oranjelaan 7, Rozenburg ZH
+					%td
+						%a{ :href => "#", :class => "btn" }
+							Inschrijven
+
+		%h2#anchor-3
+			Nabewerking
+		%p{ :class => "intro" }
+			Heb jij zelf mooie foto's in bezit, maar mis je de 'finishing touch'? Neem dan <a href="/contact">contact</a> met ons op.
+
+{% endblock %}

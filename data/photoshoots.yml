@@ -1,7 +1,7 @@
-- "Fiesta ST150 van Koen":
+- "Opel Corsa":
     client: Koen Romers
-    brand: Ford
-    type: Fiesta ST
+    brand: Opel
+    type: Corsa
     build_year: 2006
     price: 23000
     hp: 157
@@ -12,7 +12,7 @@
     topspeed: 220
     acceleration: 8.3
     thumbnail: /samples/photoshoots/1.jpeg
-    _permalink: fiesta-st150-van-koen
+    _permalink: opel-corsa
 - "Dodge Viper GTS":
     client: Koen Romers
     brand: Dodge
@@ -26,5 +26,35 @@
     weight: 2000
     topspeed: 298
     acceleration: 5
-    thumbnail: /samples/photoshoots/2.jpeg
+    thumbnail: /samples/photoshoots/5.jpeg
     _permalink: dodge-viper-gts
+- "BMW M3":
+    client: Koen Romers
+    brand: BMW
+    type: M3
+    build_year: 2006
+    price: 23000
+    hp: 157
+    torque: 210
+    cc: 1999
+    cylinders: 4
+    weight: 1000
+    topspeed: 220
+    acceleration: 8.3
+    thumbnail: /samples/photoshoots/2.jpeg
+    _permalink: bmw-m3
+- "Renault Clio":
+    client: Koen Romers
+    brand: Renault
+    type: Clio
+    build_year: 2006
+    price: 23000
+    hp: 157
+    torque: 210
+    cc: 1999
+    cylinders: 4
+    weight: 1000
+    topspeed: 220
+    acceleration: 8.3
+    thumbnail: /samples/photoshoots/3.jpeg
+    _permalink: renault-clio

@@ -11,6 +11,13 @@ $orange: #f64305
 a
 	text-decoration: none
 
+p a,
+ul li a
+	color: $grey
+
+	&:hover
+		color: $orange
+
 h2
 	font-size: 48px
 	line-height: 68px
@@ -38,6 +45,9 @@ h2
 	&.grey
 		background: $grey
 
+	&:hover
+		color: white
+
 p.intro
 	font-size: 32px
 	line-height: 50px
@@ -60,7 +70,7 @@ p.intro
 // Portfolio overview
 .thumbs
 	position: relative
-	margin: 50px 0 0 0
+	margin: -35px 0 0 0
 	li
 		position: relative
 		float: left
@@ -68,8 +78,8 @@ p.intro
 		&.no-mg
 			margin-right: 0
 		&.small
-			width: 235px
-			height: 235px
+			width: 220px
+			height: 220px
 		a
 			width: 100%
 			height: 100%
@@ -162,6 +172,176 @@ p.intro
 		.rsArrowIcn
 			background-image: url(/images/arrow-next.png)
 
+// Static header pictures
+figure.header
+	position: relative
+	width: 100%
+	height: 600px
+	overflow: hidden
+	background-position: center center
+	+background-size(cover)
+
+	&.right
+		background-position: top right
+
+// Intro underneath header
+.intro-wrapper
+	position: relative
+	width: 100%
+	background: $grey url(/images/bg-grey.gif)
+	text-align: center
+	padding: 50px 0
+
+	ul li
+		display: inline-block
+		margin-right: 15px
+
+		&.no-mg
+			margin-right: 0
+// Main content 
+.main-content-wrapper
+	position: relative
+	width: 100%
+	padding: 100px 0 50px 0
+
+	h2
+		color: $darkGrey
+	p.intro
+		color: $darkGrey
+		font-size: 28px
+		line-height: 40px
+
+		&.small
+			margin-right: 300px
+
+	.filter
+		position: absolute
+		top: 100px
+		right: 0
+
+		.btn
+			background: $orange url(/images/arrow-filter.png) no-repeat 115px center
+			padding-right: 45px
+	hr.line
+		background: #e5e5e5
+		border: 0
+		border-bottom: 1px solid white
+		height: 1px
+		margin-bottom: 35px
+	.thumbs
+		margin: 0 0 35px 0
+		float: left
+
+		li
+			width: 313px
+			height: 313px
+// Priceplans
+.priceplans
+	position: relative
+	float: left
+	width: 100%
+	margin: 20px 0 50px 0
+
+	.priceplan
+		position: relative
+		float: left
+		width: 33%
+		background: #fafafa
+		text-align: center
+
+		h3
+			display: block
+			width: 100%
+			background: #dedede
+			height: 72px
+			line-height: 72px
+			color: $darkGrey
+			font-family: 'Oswald', sans-serif
+			font-weight: 300
+			font-size: 36px
+		ul li 
+			display: block
+			height: 40px
+			line-height: 40px
+			border-bottom: 1px dashed #e6e6e6
+
+			&.price
+				font-size: 48px
+				font-weight: 700
+				font-family: 'Oswald', sans-serif
+				height: 100px
+				line-height: 100px
+				&.small
+					font-size: 32px
+			&.book
+				border-bottom: 0
+				height: 60px
+				line-height: 60px
+				margin: 10px 0 0 0
+
+			.btn
+				font-size: 22px
+
+		&.highlight
+			margin-top: -10px
+			background: white
+			border-left: 1px solid white
+			border-right: 1px solid white
+
+			h3
+				background: #d1d0ce
+				height: 92px
+				line-height: 92px
+// Tables
+.table
+	position: relative
+	width: 100%
+	margin-bottom: 50px
+
+	table
+		border-collapse: collapse
+		width: 100%
+
+		tr
+			background: #fafafa
+			border-bottom: 1px dashed #e6e6e6
+
+			&.no-border
+				border: 0
+			&.even
+				background: white
+			th
+				background: #dedede
+				height: 60px
+				line-height: 60px
+				padding-left: 25px
+				font-family: 'Oswald', sans-serif
+				font-weight: 400
+				font-size: 18px
+			td
+				padding-left: 25px
+
+				.btn
+					font-size: 16px
+					height: 30px
+					line-height: 30px
+					margin: 10px 0
+// Error styles
+ul.error
+	color: $darkGrey
+	font-size: 28px
+	line-height: 40px
+	font-family: 'Oswald', sans-serif
+	font-weight: 300
+	list-style: outside
+	margin: 0 0 0 50px
+
+// Google maps
+.maps
+	position: relative
+	width: 100%
+	height: 600px
+
 // Specific styles
 body,html
 	width: 100%
@@ -236,12 +416,24 @@ header
 
 			&.active a
 				color: $orange
-
+// Slider styles
 .slider-wrapper
 	position: relative
 	width: 100%
 	height: 100%
 	min-height: 100%
+
+	.scrolldown
+		position: absolute
+		bottom: 10px
+		right: 10px
+		width: 175px
+		height: 25px
+		line-height: 25px
+		font-size: 14px
+		background: $orange url(/images/arrow-filter.png) no-repeat 160px center
+		padding: 0 0 0 15px
+		z-index: 101
 
 	.slider
 		position: absolute
@@ -251,7 +443,7 @@ header
 		bottom: 0
 		height auto
 		width: auto
-
+// Content wrappers homepage
 .content-wrapper
 	position: relative
 	width: 100%
@@ -281,6 +473,7 @@ header
 			&.extra
 				width: 40%
 				padding-left: 10%
+// Footer
 footer
 	position: relative
 	clear: both

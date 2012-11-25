@@ -12,24 +12,24 @@ site:
         title: "Home"
         published: true
         listed: true
-    - "over-ons":
-        title: "Over ons"
+    - "wat-doen-wij":
+        title: "Wat doen wij?"
         published: true
         listed: true
-    - "onze-diensten":
-        title: "Onze diensten"
+    - "ons-werk":
+        title: "Ons werk"
         published: true
         listed: true
-    - "portfolio":
-        title: "Portfolio"
-        published: true
-        listed: true
-    - "portfolio/detail":
-        title: "Portfolio detail"
+    - "ons-werk/detail":
+        title: "Ons werk detail"
         published: true
         listed: false
         templatized: true
         model: photoshoots
+    - "over-ons":
+        title: "Over ons"
+        published: true
+        listed: true
     - "contact":
         title: "Contact"
         published: true

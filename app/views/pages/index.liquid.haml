@@ -5,7 +5,7 @@
 
 		%title {{ site.name }} | {{ page.title }}
 
-		%meta{ name: "viewport", content: "width=device-width; initial-scale=1.0; maximum-scale=1.0;" }
+		%meta{ name: "viewport", content: "width=device-width, initial-scale=1.0, maximum-scale=1.0" }
 		%meta{ name: "robots", content: "follow, all" }
 		%meta{ name: "googlebot", content: "index, follow" }
 		%meta{ name: "revisit-after", content: "2 days" }
@@ -23,7 +23,56 @@
 		{% block 'main' %}
 		
 		{% include 'slider' %}
-		{% include 'home' %}
+		
+		%article{ :class => "content-wrapper grey" }
+			%div{ :class => "shadow" }
+			%section{ :class => "wrapper" }
+				%article{ :class => "left text" }
+					%h2
+						Een professionele fotoshoot?
+					%p{ :class => "intro" }
+						Dan ben je bij ons aan het juiste adres! Tevens verzorgen wij cursussen gericht op automotive fotografie.
+					%p
+						%a{ :href => "/wat-doen-wij", :class => "btn" }
+							Lees meer
+				%article{ :class => "right" }
+					{{ 'dummies/home_our-services.png' | theme_image_tag: 'alt:Onze diensten' }}
+
+		%article{ :class => "content-wrapper orange" }
+			%section{ :class => "wrapper" }
+				%article{ :class => "left" }
+					%ul{ :class => "thumbs" }
+						{% for photoshoot in contents.photoshoots limit:12 %}
+						%li{ :class => "small{{ ' no-mg' | modulo: forloop.index0, 2 }}" }
+							%a{ :href => "/ons-werk/{{ photoshoot._permalink }}" }
+								%img{ :src => "{{ photoshoot.thumbnail.url }}", :alt => "{{ photoshoot.title }}" }
+								%p
+									{{ photoshoot.brand }} {{ photoshoot.type }}
+									%span{ :class => "btn" }
+										Bekijken
+						{% endfor %}
+				%article{ :class => "right text" }
+					%h2
+						Een greep uit ons werk
+					%p{ :class => "intro" }
+						Wij hebben een zeer divers portfolio en hebben de mooiste fotoshoots voor jullie op een rij gezet.
+					%p
+						%a{ :href => "#", :class => "btn grey" }
+							Bekijk ons portfolio
+
+		%article{ :class => "content-wrapper" }
+			%section{ :class => "wrapper" }
+				%article{ :class => "left text extra" }
+					%h2{ :class => "grey" }
+						Wie zijn wij?
+					%p{ :class => "intro grey" }
+						Ons team bestaat uit 2 freelance fotografen met jarenlange ervaring in de automotive fotografie.
+					%p
+						%a{ :href => "#", :class => "btn" }
+							Lees meer
+					
+				%article{ :class => "right" }
+					{{ 'dummies/home_about-us.png' | theme_image_tag: 'alt:Ons team' }}
 
 		{% endblock %}
 		
