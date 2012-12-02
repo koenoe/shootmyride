@@ -2,7 +2,6 @@
 project_path      = File.join(File.dirname(__FILE__), '..', 'public')
 http_path         = '/'
 css_dir           = '../tmp/stylesheets'
-# css_dir			  = 'stylesheets'
 sass_dir          = 'stylesheets'
 images_dir        = 'images'
 javascripts_dir   = 'javascripts'
