@@ -1,6 +1,29 @@
 @import compass/reset
 @import compass/css3
 
+// Mixins
+=data-uri-bg($image, $properties: false)
+	@if $properties != false
+		background: inline-image($image) $properties
+		*background: url($image) $properties
+	@else
+		background: inline-image($image)
+		*background: url($image)
+
+=retina-image($image, $ext, $resolution, $properties: false)
+	background: url(/images/#{$image}.#{$ext}) $properties
+	@media only screen and (-webkit-device-pixel-ratio: 2)
+		background: url(/images/#{$image}_2x.#{$ext}) $properties
+		background-size: $resolution
+
+=input-placeholder($color)
+	&.placeholder
+		color: $color
+	&:-moz-placeholder
+		color: $color
+	&::-webkit-input-placeholder
+		color: $color
+
 // Color variables
 $grey: #333
 $lightGrey: #cacaca
@@ -12,7 +35,8 @@ a
 	text-decoration: none
 
 p a,
-ul li a
+ul li a,
+address a
 	color: $grey
 
 	&:hover
@@ -29,6 +53,9 @@ h2
 	&.grey
 		color: $darkGrey
 
+input:focus
+	outline: none
+
 .btn
 	display: inline-block
 	height: 44px
@@ -41,6 +68,9 @@ h2
 	background: $orange
 	color: white
 	padding: 0 20px
+	border: 0
+	outline: none
+	cursor: pointer
 
 	&.grey
 		background: $grey
@@ -67,6 +97,9 @@ p.intro
 	width: 100%
 	height: 8px
 	z-index: 1
+.message
+	font-style: italic
+
 // Portfolio overview
 .thumbs
 	position: relative
@@ -87,6 +120,9 @@ p.intro
 			color: white
 			font-family: 'Oswald', sans-serif
 			font-weight: 400
+
+			&:hover p
+				color: white
 
 			img
 				width: 100%
@@ -187,6 +223,7 @@ figure.header
 // Intro underneath header
 .intro-wrapper
 	position: relative
+	float: left
 	width: 100%
 	background: $grey url(/images/bg-grey.gif)
 	text-align: center
@@ -198,11 +235,44 @@ figure.header
 
 		&.no-mg
 			margin-right: 0
+
+	.newsletter
+		position: relative
+		clear: both
+		width: 440px
+		margin: auto
+		overflow: hidden
+
+		input
+			float: left
+			display: inline-block
+			&[type="email"]
+				width: 250px
+				height: 14px
+				padding: 15px
+				border: 0
+				margin-right: 15px
+				font-size: 16px
+				font-family: 'Droid Sans', serif
+				font-weight: 400
+				+input-placeholder($lightGrey)
+		.btn
+			font-weight: 300
+
+		.message
+			font-size: 18px
+			color: white
+			font-style: italic
+
 // Main content 
 .main-content-wrapper
 	position: relative
+	float: left
 	width: 100%
-	padding: 100px 0 50px 0
+	padding: 50px 0 50px 0
+
+	&.extra
+		padding-top: 100px
 
 	h2
 		color: $darkGrey
@@ -235,6 +305,28 @@ figure.header
 		li
 			width: 313px
 			height: 313px
+	address
+		position: relative
+		font-family: 'Oswald', sans-serif
+		font-weight: 300
+		font-size: 20px
+		line-height: 32px
+		margin-top: 25px
+
+		section
+			float: left
+			margin-right: 100px
+
+			a
+				color: $orange
+
+			span
+				font-weight: bold
+				width: 20px
+				display: inline-block
+
+				&.wide
+					width: 40px
 // Priceplans
 .priceplans
 	position: relative
@@ -342,6 +434,66 @@ ul.error
 	width: 100%
 	height: 600px
 
+// Forms
+.form
+	position: relative
+	float: left
+	width: 100%
+	margin: 35px 0
+
+	.entry
+		position: relative
+		float: left
+		width: 100%
+		margin: 0 0 30px 0
+
+		label
+			display: block
+			float: left
+			font-family: 'Oswald', sans-serif
+			font-weight: 400
+			font-size: 24px
+			width: 25%
+			height: 50px
+			line-height: 50px
+
+		p.error
+			float: right
+			width: 72%
+			color: red
+			margin-top: 15px
+
+		input[type="text"],
+		input[type="email"],
+		textarea
+			float: right
+			width: 70%
+			background: white
+			border: 5px solid white
+			height: auto
+			padding: 15px
+			font-size: 16px
+			font-family: 'Droid Sans', serif
+			font-weight: 400
+			color: $grey
+
+			&.error
+				border: 5px solid red
+
+		input[type="text"],
+		input[type="email"]
+			height: 20px
+
+		textarea
+			height: 150px
+
+		input[type="submit"]
+			float: right
+			cursor: pointer
+			border: 0
+			font-weight: 300
+
+
 // Specific styles
 body,html
 	width: 100%
@@ -425,15 +577,15 @@ header
 
 	.scrolldown
 		position: absolute
-		bottom: 10px
-		right: 10px
+		bottom: 15px
+		right: 15px
 		width: 175px
 		height: 25px
 		line-height: 25px
 		font-size: 14px
 		background: $orange url(/images/arrow-filter.png) no-repeat 160px center
 		padding: 0 0 0 15px
-		z-index: 101
+		z-index: 50
 
 	.slider
 		position: absolute

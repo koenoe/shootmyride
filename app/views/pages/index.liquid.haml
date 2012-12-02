@@ -29,14 +29,16 @@
 			%section{ :class => "wrapper" }
 				%article{ :class => "left text" }
 					%h2
-						Een professionele fotoshoot?
+						{% editable_short_text 'Title block 1' %}Een professionele fotoshoot?{% endeditable_short_text %}
 					%p{ :class => "intro" }
-						Dan ben je bij ons aan het juiste adres! Tevens verzorgen wij cursussen gericht op automotive fotografie.
+						{% editable_short_text 'Intro block 1' %}Dan ben je bij ons aan het juiste adres! Tevens verzorgen wij cursussen gericht op automotive fotografie.{% endeditable_short_text %}
 					%p
-						%a{ :href => "/wat-doen-wij", :class => "btn" }
-							Lees meer
+						%a{ :href => "{% editable_short_text 'Link button block 1' %}/wat-doen-wij{% endeditable_short_text %}", :class => "btn" }
+							{% editable_short_text 'Label button block 1' %}Lees meer{% endeditable_short_text %}
 				%article{ :class => "right" }
+					{% editable_file 'Image block 1', hint: 'Maximum size of 508x375' %}
 					{{ 'dummies/home_our-services.png' | theme_image_tag: 'alt:Onze diensten' }}
+					{% endeditable_file %}
 
 		%article{ :class => "content-wrapper orange" }
 			%section{ :class => "wrapper" }
@@ -53,26 +55,29 @@
 						{% endfor %}
 				%article{ :class => "right text" }
 					%h2
-						Een greep uit ons werk
+						{% editable_short_text 'Title block 2' %}Een greep uit ons werk{% endeditable_short_text %}
+
 					%p{ :class => "intro" }
-						Wij hebben een zeer divers portfolio en hebben de mooiste fotoshoots voor jullie op een rij gezet.
+						{% editable_short_text 'Intro block 2' %}Wij hebben een zeer divers portfolio en hebben de mooiste fotoshoots voor jullie op een rij gezet.{% endeditable_short_text %}
 					%p
-						%a{ :href => "#", :class => "btn grey" }
-							Bekijk ons portfolio
+						%a{ :href => "{% editable_short_text 'Link button block 2' %}/ons-werk{% endeditable_short_text %}", :class => "btn grey" }
+							{% editable_short_text 'Label button block 2' %}Bekijk ons portfolio{% endeditable_short_text %}
 
 		%article{ :class => "content-wrapper" }
 			%section{ :class => "wrapper" }
 				%article{ :class => "left text extra" }
 					%h2{ :class => "grey" }
-						Wie zijn wij?
+						{% editable_short_text 'Title block 3' %}Wie zijn wij?{% endeditable_short_text %}
 					%p{ :class => "intro grey" }
-						Ons team bestaat uit 2 freelance fotografen met jarenlange ervaring in de automotive fotografie.
+						{% editable_short_text 'Intro block 3' %}Ons team bestaat uit 2 fotografen met jarenlange ervaring in de automotive fotografie.{% endeditable_short_text %}
 					%p
-						%a{ :href => "#", :class => "btn" }
-							Lees meer
+						%a{ :href => "{% editable_short_text 'Link button block 3' %}/contact{% endeditable_short_text %}", :class => "btn" }
+							{% editable_short_text 'Label button block 3' %}Neem contact met ons op{% endeditable_short_text %}
 					
 				%article{ :class => "right" }
+					{% editable_file 'Image block 3', hint: 'Maximum size of 538x440' %}
 					{{ 'dummies/home_about-us.png' | theme_image_tag: 'alt:Ons team' }}
+					{% endeditable_file %}
 
 		{% endblock %}
 		

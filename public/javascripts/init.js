@@ -1,5 +1,5 @@
 $(function(){
-
+	// Init royal slider
 	$('.royalslider').royalSlider({
 		arrowsNav: true,
 		controlNavigation: 'bullets',
@@ -20,22 +20,27 @@ $(function(){
 		}
 	}); 
 
+	// Temporary, needs to change
 	$('figure.header').each(function(){
 		var src = $(this).data('src');
 		$(this).css({
 			backgroundImage: 'url('+src+')'
 		});
 	});
+	// End temporary
 
-	$('.backtotop').click(function(){
-		$('html,body').animate({ scrollTop: 0 }, 500);
-		return false;
+	// Misc class
+	$('body').misc();
+
+	// Init Google Maps
+	$('.maps').maps({
+		zoom: 9,
+		addresses: ["Oranjelaan 7, Rozenburg","Musschenbroekstraat 42, 's-Hertogenbosch","Hatertseweg 32, Nijmegen"],
+		title: 'Shoot my Ride',
+		markerImage: {
+			url: '/images/marker.png',
+			width: 31,
+			height: 48
+		}
 	});
-
-	var offset = $('.content-wrapper').offset();
-	$('.scrolldown').click(function(){
-		$('html,body').animate({ scrollTop: offset.top }, 500);
-		return false;
-	});
-
 });

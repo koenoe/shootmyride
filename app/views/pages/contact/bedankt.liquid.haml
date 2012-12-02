@@ -1,0 +1,12 @@
+{% extends 'contact' %}
+
+{% block 'form' %}
+
+%p#contact{ :class => "intro" }
+	{% if message %}
+	Bedankt voor je bericht. Wij nemen binnen 1 dag contact met je op.
+	{% else %}
+	Geen verzonden data uit het formulier ontvangen. <a href="/contact">Ga terug naar de contactpagina</a>
+	{% endif %}
+
+{% endblock %}

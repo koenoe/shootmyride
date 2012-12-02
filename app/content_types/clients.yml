@@ -3,20 +3,18 @@ description: List of all the clients
 label_field_name: name
 order_by: _position
 slug: clients
+public_submission_enabled: true
 fields:
 - name:
     label: Name
     type: string
-    required: true
     hint: Full name
 - firstname:
     label: First name
     type: string
-    required: true
 - lastname:
     label: Last name
     type: string
-    required: true
 - email:
     label: Email
     type: string

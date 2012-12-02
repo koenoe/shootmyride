@@ -6,7 +6,7 @@
 				%li{ :class => "{% if page.slug == 'index' %}active{% endif %}" }
 					%a{ :href => "/" }
 						Home
-				{% nav 'parent', depth: 1, no_wrapper: true, icon: false, active_class: 'active' %}
+				{% nav 'site', depth: 1, no_wrapper: true, icon: false, active_class: 'active' %}
 		%ul{ :class => "social" }
 			%li
 				%a{ :href => "#" }
@@ -14,4 +14,4 @@
 			%li
 				%a{ :href => "#" }
 					{{ 'facebook.gif' | theme_image_tag: 'alt:Facebook' }}
-	%a{ :href => "#", :class => "backtotop" }
+	%a{ :href => "#", :class => "backtotop scrollTo" }

@@ -3,7 +3,6 @@
 {% block 'main' %}
 
 %div{ :class => "maps" }
-	google maps here
 
 %article{ :class => "intro-wrapper" }
 	%div{ :class => "shadow" }
@@ -11,13 +10,66 @@
 		%h2
 			Neem contact met ons op
 		%p{ :class => "intro" }
-			Je kunt contact met ons opnemen door het contactformulier op deze pagina in te vullen. Wil je onze nieuwsbrief ontvangen? Laat dan je e-mailadres achter via onderstaand formulier.
+			Je kunt contact met ons opnemen door het contactformulier op deze pagina in te vullen of middels de contactgegevens onderaan de pagina.
 
 %article{ :class => "main-content-wrapper" }
 	%section{ :class => "wrapper" }
+		{% block 'form' %}
 		%h2
 			Contactformulier
-		%p{ :class => "intro" }
+		%p#contact{ :class => "intro" }
 			Vul onderstaand contactformulier in en wij nemen zo spoedig mogelijk contact met je op.
 
+		%div{ :class => "form" }
+			%form{ :action => "{{ contents.messages.public_submission_url }}", :method => "post" }
+				{% csrf_param %}
+				%input{ :type => "hidden", :value => "/contact/bedankt#contact", :name => "success_callback"}
+				%input{ :type => "hidden", :value => "/contact#contact", :name => "error_callback"}
+
+				%input{ :type => "hidden", :value => "{{ now }}", :name => "content[date]"}
+
+				%div{ :class => "entry" }
+					%label{ :for => "input-name" }
+						Naam
+					%input#input-name{ :name => "content[name]", :type => "text", :value => "{% if message.name %}{{ message.name }}{% endif %}", :class => "{% if message.errors.name %}error{% endif %}"}
+					{% if message.errors.name %}
+					%p{ :class => "error" }
+						Dit veld is verplicht.
+					{% endif %}
+				%div{ :class => "entry" }
+					%label{ :for => "input-email" }
+						E-mail
+					%input#input-email{ :name => "content[email]", :type => "email", :value => "{% if message.email %}{{ message.email }}{% endif %}", :class => "{% if message.errors.email %}error{% endif %}"}
+					{% if message.errors.email %}
+					%p{ :class => "error" }
+						Dit veld is verplicht.
+					{% endif %}
+				%div{ :class => "entry" }
+					%label{ :for => "input-phone" }
+						Telefoonnummer
+					%input#input-phone{ :name => "content[phone]", :type => "text", :value => "{% if message.phone %}{{ message.phone }}{% endif %}"}
+				%div{ :class => "entry" }
+					%label{ :for => "textarea-message" }
+						Bericht
+					%textarea#textarea-message{ :name => "content[message]", :class => "{% if message.errors.message %}error{% endif %}" }
+					{% if message.message %}{{ message.message }}{% endif %}
+					{% if message.errors.message %}
+					%p{ :class => "error" }
+						Dit veld is verplicht.
+					{% endif %}
+				%div{ :class => "entry" }
+					%input{ :type => "submit", :class => "btn", :value => "Verzenden"}
+		{% endblock %}
+		%h2
+			Contactgegevens
+		%address
+			%section
+				Shoot my Ride<br>Oranjelaan 7<br>3181 HK Rozenburg
+			%section
+				<span>T</span> +31(0)6 24 21 61 36<br>
+				<span>T</span> +31(0)6 24 21 61 36<br>
+				<span>E</span> <a href="mailto:info@shootmyride.nl">info@shootmyride.nl</a>
+			%section
+				<span class="wide">KvK</span> 1234567890<br>
+				<span class="wide">BTW</span> VOF1234567890
 {% endblock %}

@@ -4,5 +4,5 @@
 		%a{ :href => "{{ image.image.url }}", :class => "rsImg" }
 			{{ image.title }}
 		{% endfor %}
-	%a{ :href => "#", :class => "scrolldown btn" }
+	%a{ :href => "#", :class => "scrolldown btn scrollTo", :data => { :scrollToElement => ".content-wrapper" } }
 		Scroll naar beneden

@@ -1,0 +1,27 @@
+name: Messages
+description: List of all the messages sent by using the contact form
+label_field_name: name
+order_by: _position
+slug: messages
+public_submission_enabled: true
+fields:
+- name:
+    label: Name
+    type: string
+    hint: Full name
+    required: true
+- email:
+    label: Email
+    type: string
+    required: true
+- phone:
+    label: Phone
+    type: string
+- message:
+    label: Message
+    type: text
+    required: true
+- date:
+    label: Date
+    type: date
+    required: true
