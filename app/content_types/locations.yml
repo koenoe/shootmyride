@@ -1,0 +1,32 @@
+name: Locations
+description: Overview of all the locations being used for events and photoshoots
+label_field_name: name
+order_by: _position
+slug: locations
+public_submission_enabled: true
+fields:
+- name:
+    label: Name
+    type: string
+- address:
+    label: Address
+    type: string
+- zipcode:
+    label: Zipcode
+    type: string
+- city:
+    label: City
+    type: string
+- country:
+    label: Country
+    type: string
+- latitude:
+    label: Latitude
+    type: string
+- longitude:
+    label: Longitude
+    type: string
+- active:
+    label: Active
+    type: boolean
+    hint: Visible on website

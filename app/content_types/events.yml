@@ -1,0 +1,17 @@
+name: Events
+description: List of all the events (cursussen)
+label_field_name: name
+order_by: _position
+slug: events
+fields:
+- name:
+    label: Name
+    type: string
+- date:
+    label: Date
+    type: date
+- location:
+    label: Location
+    type: belongs_to
+    class_name: Locations
+    target: locations

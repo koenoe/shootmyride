@@ -20,18 +20,38 @@
 
 	Misc.prototype = {
 		init: function(){
-			this.setEvents();
+			// Set events
+			this._setEvents();
+
+			// Check if there is a hashbang in the url
+			this.checkForHashBang();
 		},
-		setEvents: function(){
-			$('.scrollTo').on('click', this.scrollTo);
-		},
-		scrollTo: function(e){
-			var $el = $(e.target);
-			if($el.data('scrolltoelement')){
-				var offset = $($el.data('scrolltoelement')).offset();
-			}
-			$('html,body').animate({ scrollTop: (offset ? offset.top : 0) }, 500);
+		scrollToTop: function(e){
+			$('html,body').animate({ scrollTop: 0 }, 500);
 			return false;
+		},
+		checkForHashBang: function(){
+			var hash = this._stripHash(window.location.hash);
+			this._doScroll(hash);
+		},
+		_setEvents: function(){
+			$('.scrollToTop').on('click', this.scrollToTop.bind(this));
+			$(window).on('hashchange', this.checkForHashBang.bind(this));
+		},
+		_doScroll: function(hash){
+			var headerHeight = $('header').height();
+			if(hash){
+				var $scrollTo = $('#' + hash);
+				if($scrollTo){
+					var offset = $scrollTo.offset();
+					if(offset){
+						$('html,body').animate({ scrollTop: offset.top - headerHeight }, 500);
+					}
+				}
+			}
+		},
+		_stripHash: function(str){
+			return str.replace('#!/','');
 		}
 	};
 

@@ -18,13 +18,72 @@
 		{% include 'javascripts' %}
 
 	%body
+		%div#fb-root
+
+		/ %div#modal-window-overlay
+		/ %div#modal-window
+		/ 	%div#modal-window-content
+		/ 		%h2
+		/ 			Selecteer de gewenste merken
+		/ 		%div{ :class => "checkbox" }
+		/ 			%label
+		/ 				%input{ :type => "checkbox", :value => "1" }
+		/ 					%span
+		/ 						Audi
+		/ 		%div{ :class => "checkbox" }
+		/ 			%label
+		/ 				%input{ :type => "checkbox", :value => "1" }
+		/ 					%span
+		/ 						BMW
+		/ 		%div{ :class => "checkbox" }
+		/ 			%label
+		/ 				%input{ :type => "checkbox", :value => "1" }
+		/ 					%span
+		/ 						Citroën
+		/ 		%div{ :class => "checkbox" }
+		/ 			%label
+		/ 				%input{ :type => "checkbox", :value => "1" }
+		/ 					%span
+		/ 						Dodge
+		/ 		%div{ :class => "checkbox" }
+		/ 			%label
+		/ 				%input{ :type => "checkbox", :value => "1" }
+		/ 					%span
+		/ 						Datsun
+		/ 		%div{ :class => "checkbox" }
+		/ 			%label
+		/ 				%input{ :type => "checkbox", :value => "1" }
+		/ 					%span
+		/ 						Ford
+		/ 		%div{ :class => "checkbox" }
+		/ 			%label
+		/ 				%input{ :type => "checkbox", :value => "1" }
+		/ 					%span
+		/ 						Mercedes
+		/ 		%div{ :class => "checkbox" }
+		/ 			%label
+		/ 				%input{ :type => "checkbox", :value => "1" }
+		/ 					%span
+		/ 						Porsche
+		/ 		%div{ :class => "checkbox" }
+		/ 			%label
+		/ 				%input{ :type => "checkbox", :value => "1" }
+		/ 					%span
+		/ 						Opel
+
+		/ 	%a#modal-window-submit{ :class => "btn", :href => "#" }
+		/ 		Toon resultaten
+
+		/ 	%a#modal-window-close{ :class => "btn" }
+		/ 		Sluiten
+
 		{% include 'header' %}
 
 		{% block 'main' %}
 		
 		{% include 'slider' %}
-		
-		%article{ :class => "content-wrapper grey" }
+
+		%article#een-professionele-fotoshoot{ :class => "content-wrapper grey" }
 			%div{ :class => "shadow" }
 			%section{ :class => "wrapper" }
 				%article{ :class => "left text" }

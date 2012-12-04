@@ -27,7 +27,7 @@
 // Color variables
 $grey: #333
 $lightGrey: #cacaca
-$darkGrey: #2a2a2a
+$darkGrey: #252525
 $orange: #f64305
 
 // Reusable styles
@@ -97,6 +97,7 @@ p.intro
 	width: 100%
 	height: 8px
 	z-index: 1
+
 .message
 	font-style: italic
 
@@ -274,6 +275,11 @@ figure.header
 	&.extra
 		padding-top: 100px
 
+	.subwrapper
+		position: relative
+		width: 100%
+		float: left
+
 	h2
 		color: $darkGrey
 	p.intro
@@ -387,6 +393,7 @@ figure.header
 // Tables
 .table
 	position: relative
+	float: left
 	width: 100%
 	margin-bottom: 50px
 
@@ -493,6 +500,55 @@ ul.error
 			border: 0
 			font-weight: 300
 
+// Modal window
+#modal-window-overlay
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background: black
+	z-index: 500
+	+opacity(0.8)
+
+#modal-window
+	position: fixed
+	top: 50%
+	left: 50%
+	margin-top: -300px
+	margin-left: -400px
+	width: 700px
+	max-height: 500px
+	background: white
+	padding: 50px
+	z-index: 501
+
+	.checkbox
+		position: relative
+		float: left
+		width: 33%
+		margin: 0 0 5px 0
+		font-size: 15px
+
+		label
+			cursor: pointer
+
+	h2
+		color: $grey
+		font-size: 26px
+		font-weight: 400
+
+	#modal-window-submit
+		margin: 25px 0 0 0
+	#modal-window-close
+		position: absolute
+		top: 0
+		right: 0
+		background: $orange url(/images/close.png) no-repeat 95px center
+		width: 105px
+		font-size: 20px
+		padding: 0 0 0 20px
+		z-index: 502
 
 // Specific styles
 body,html
@@ -601,6 +657,11 @@ header
 	width: 100%
 	height: 400px
 	padding: 100px 0 100px 0
+	overflow: hidden
+
+	&.small
+		padding: 50px 0
+		height: 120px
 
 	&.grey
 		background: $grey url(/images/bg-grey.gif)
@@ -625,6 +686,17 @@ header
 			&.extra
 				width: 40%
 				padding-left: 10%
+	.facebook-wrapper
+		position: relative
+		float: left
+		width: 100%
+		text-align: center
+
+		.facebook
+			position: relative
+			width: 315px
+			margin: auto
+			overflow: hidden
 // Footer
 footer
 	position: relative
@@ -632,6 +704,7 @@ footer
 	width: 100%
 	height: 150px
 	background: $darkGrey
+	border-top: 2px solid #222
 
 	nav
 		position: relative

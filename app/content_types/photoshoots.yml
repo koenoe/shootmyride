@@ -73,3 +73,8 @@ fields:
     class_name: Photos
     target: photos
     inverse_of: photoshoot
+- location:
+    label: Location
+    type: belongs_to
+    class_name: Locations
+    target: locations

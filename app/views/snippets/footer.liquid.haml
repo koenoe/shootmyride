@@ -1,5 +1,12 @@
-%footer
+%article{ :class => "content-wrapper grey small" }
 	%div{ :class => "shadow" }
+	%section{ :class => "wrapper" }
+		%article{ :class => "facebook-wrapper" }
+			%h2
+				Like ons op Facebook
+			%div{ :class => "facebook" }
+				<div class="fb-like" data-href="http://www.facebook.com/pages/Shoot-my-Ride/370660943027880" data-send="false" data-show-faces="true" data-font="arial" data-colorscheme="dark"></div>
+%footer
 	%section{ :class => "wrapper" }
 		%nav
 			%ul
@@ -14,4 +21,4 @@
 			%li
 				%a{ :href => "#" }
 					{{ 'facebook.gif' | theme_image_tag: 'alt:Facebook' }}
-	%a{ :href => "#", :class => "backtotop scrollTo" }
+	%a{ :href => "#", :class => "backtotop scrollToTop" }
