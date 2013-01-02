@@ -78,3 +78,7 @@ fields:
     type: belongs_to
     class_name: Locations
     target: locations
+- active:
+    label: Active
+    type: boolean
+    hint: Visible on website

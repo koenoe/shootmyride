@@ -17,3 +17,7 @@ fields:
     label: Url
     type: string
     hint: Url to internal of external page
+- active:
+    label: Active
+    type: boolean
+    hint: Visible on website

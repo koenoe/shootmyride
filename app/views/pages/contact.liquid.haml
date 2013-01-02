@@ -16,17 +16,13 @@
 	%section{ :class => "wrapper" }
 		{% block 'form' %}
 		%h2
-			Contactformulier
+			Contactformulier<br>{{ contact.name }}
 		%p#contact{ :class => "intro" }
 			Vul onderstaand contactformulier in en wij nemen zo spoedig mogelijk contact met je op.
 
 		%div{ :class => "form" }
-			%form{ :action => "{{ contents.messages.public_submission_url }}", :method => "post" }
+			%form{ :action => "#", :method => "post" }
 				{% csrf_param %}
-				%input{ :type => "hidden", :value => "/contact/bedankt#contact", :name => "success_callback"}
-				%input{ :type => "hidden", :value => "/contact#contact", :name => "error_callback"}
-
-				%input{ :type => "hidden", :value => "{{ now }}", :name => "content[date]"}
 
 				%div{ :class => "entry" }
 					%label{ :for => "input-name" }

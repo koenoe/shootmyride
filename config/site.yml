@@ -30,10 +30,6 @@ site:
         title: "Contact"
         published: true
         listed: true
-    - "contact/bedankt":
-        title: "Contact | Bedankt voor je bericht"
-        published: true
-        listed: false
     - "algemene-voorwaarden":
         title: "Algemene voorwaarden"
         published: true

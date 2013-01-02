@@ -5,9 +5,9 @@
 %article{ :class => "main-content-wrapper extra" }
 	%section{ :class => "wrapper" }
 		%h2
-			Ons werk
+			{% editable_short_text 'Title block 1' %}Ons werk{% endeditable_short_text %}
 		%p{ :class => "intro small" }
-			Onderstaand een selectie van ons werk, maak gebruik van het filter om te filteren op het gewenste merk.
+			{% editable_short_text 'Intro' %}Onderstaand een selectie van ons werk, maak gebruik van het filter om te filteren op het gewenste merk.{% endeditable_short_text %}
 		%div{ :class => "filter" }
 			%a{ :href => "#", :class => "btn" }
 				Filteren

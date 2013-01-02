@@ -8,6 +8,10 @@ fields:
 - name:
     label: Name
     type: string
+- image:
+    label: Image
+    type: file
+    required: true
 - address:
     label: Address
     type: string

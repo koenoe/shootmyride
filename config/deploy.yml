@@ -1,12 +1,12 @@
 development:
   host: localhost:8080
-  email: koen@shootmyride.nl
-  password: 3Baco900
+  email: test@test.com
+  password: test
 staging:
   host: staging.shootmyride.nl
-  email: koen@shootmyride.nl
-  password: 3Baco900
+  email: test@test.com
+  password: test
 production:
   host: www.shootmyride.nl
-  email: koen@shootmyride.nl
-  password: 3Baco900
+  email: test@test.com
+  password: test

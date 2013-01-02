@@ -19,3 +19,7 @@ fields:
     class_name: Photoshoots
     target: photoshoots
     inverse_of: photos
+- active:
+    label: Active
+    type: boolean
+    hint: Visible on website

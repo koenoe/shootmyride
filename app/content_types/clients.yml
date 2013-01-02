@@ -39,3 +39,7 @@ fields:
     class_name: Photoshoots
     target: photoshoots
     inverse_of: client
+- active:
+    label: Active
+    type: boolean
+    hint: Visible on website

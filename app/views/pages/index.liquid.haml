@@ -95,9 +95,8 @@
 						%a{ :href => "{% editable_short_text 'Link button block 1' %}/wat-doen-wij{% endeditable_short_text %}", :class => "btn" }
 							{% editable_short_text 'Label button block 1' %}Lees meer{% endeditable_short_text %}
 				%article{ :class => "right" }
-					{% editable_file 'Image block 1', hint: 'Maximum size of 508x375' %}
-					{{ 'dummies/home_our-services.png' | theme_image_tag: 'alt:Onze diensten' }}
-					{% endeditable_file %}
+					{% capture image_block_1 %}{% editable_file 'Image block 1', hint: 'Maximum size of 508x375' %}{% endeditable_file %}{% endcapture %}
+					{% if image_block_1 != "" %}{{ image_block_1 | image_tag }}{% else %}{{ 'dummies/home_our-services.png' | theme_image_tag}}{% endif %}
 
 		%article{ :class => "content-wrapper orange" }
 			%section{ :class => "wrapper" }

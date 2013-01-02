@@ -9,9 +9,9 @@
 	%div{ :class => "shadow" }
 	%section{ :class => "wrapper" }
 		%h2
-			Wat kunnen we voor jou betekenen?
+			{% editable_short_text 'Title 1' %}Wat kunnen we voor jou betekenen?{% endeditable_short_text %}
 		%p{ :class => "intro" }
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed felis sapien, tincidunt non pulvinar in, ultrices eu orci. Sed viverra purus non magna sodales non tempor nibh vestibulum.
+			{% editable_short_text 'Intro 1' %}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed felis sapien, tincidunt non pulvinar in, ultrices eu orci. Sed viverra purus non magna sodales non tempor nibh vestibulum.{% endeditable_short_text %}
 		%ul
 			%li
 				%a{ :href => "#!/fotoshoot", :class => "btn" }
@@ -26,9 +26,9 @@
 	%section{ :class => "wrapper" }
 		%article#fotoshoot{ :class => "subwrapper" }
 			%h2
-				Fotoshoot
-			%p{ :class => "intro" }
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed felis sapien, tincidunt non pulvinar in, ultrices eu orci. Sed viverra purus non magna sodales non tempor nibh vestibulum. 
+				{% editable_short_text 'Title 2' %}Fotoshoot{% endeditable_short_text %}
+			%div{ :class => "intro" }
+				{% editable_long_text 'Intro 2' %}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed felis sapien, tincidunt non pulvinar in, ultrices eu orci. Sed viverra purus non magna sodales non tempor nibh vestibulum. {% endeditable_long_text %}
 
 			%div{ :class => "priceplans" }
 				%div{ :class => "priceplan" }
@@ -90,9 +90,9 @@
 								Reserveren
 		%article#cursus{ :class => "subwrapper" }
 			%h2
-				Cursus
-			%p{ :class => "intro" }
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed felis sapien, tincidunt non pulvinar in, ultrices eu orci. Sed viverra purus non magna sodales non tempor nibh vestibulum. 
+				{% editable_short_text 'Title 3' %}Cursus{% endeditable_short_text %}
+			%div{ :class => "intro" }
+				{% editable_long_text 'Intro 3' %}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed felis sapien, tincidunt non pulvinar in, ultrices eu orci. Sed viverra purus non magna sodales non tempor nibh vestibulum. {% endeditable_long_text %}
 
 			%div{ :class => "table" }
 				%table
@@ -138,8 +138,8 @@
 
 		%article#nabewerking{ :class => "subwrapper" }
 			%h2
-				Nabewerking
-			%p{ :class => "intro" }
-				Heb jij zelf mooie foto's in bezit, maar mis je de 'finishing touch'? Neem dan <a href="/contact">contact</a> met ons op.
+				{% editable_short_text 'Title 4' %}Nabewerking{% endeditable_short_text %}
+			%div{ :class => "intro" }
+				{% editable_long_text 'Intro 4' %}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed felis sapien, tincidunt non pulvinar in, ultrices eu orci. Sed viverra purus non magna sodales non tempor nibh vestibulum. {% endeditable_long_text %}
 
 {% endblock %}
